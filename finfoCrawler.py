@@ -97,7 +97,7 @@ def main():
         print("正在爬取: " + deocde)
         # 確認每個公司要爬取的頁數
         page = getPageCount(companyUrl)
-        # 依頁數爬取
+        # 依頁數爬取data
         for i in range(1, page + 1):
             print("共" + str(page) + "頁，正在爬取第" + str(i) + "頁")
             productUrl = companyUrl + pageUrl + str(i)
