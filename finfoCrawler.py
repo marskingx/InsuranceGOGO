@@ -100,7 +100,7 @@ def main():
         # 依頁數爬取data
         for i in range(1, page + 1):
             print("共" + str(page) + "頁，正在爬取第" + str(i) + "頁")
-            productUrl = companyUrl + pageUrl + str(i)
+            productUrl = "{0}{1}{2}".format(companyUrl, pageUrl, str(i))
             blocks = getProductBlock(productUrl)
             for productBlock in blocks:
                 productBlocks.append(productBlock)
