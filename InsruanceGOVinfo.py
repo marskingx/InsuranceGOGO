@@ -15,8 +15,6 @@ import time
 CompanyID = requests.get("https://ins-info.ib.gov.tw/customer/Info4-18.aspx?UID=28428384")
 AIInsurance = bs4.BeautifulSoup(CompanyID.text, "html.parser")
 
-print(AIInsurance)
-
 companyID = AIInsurance.find("span", id="ctl00_MainContent_lbCompanyName")  # 尋找保險公司的名稱
 print(companyID.text)
 
